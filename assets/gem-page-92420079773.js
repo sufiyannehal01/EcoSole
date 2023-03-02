@@ -1,0 +1,258 @@
+
+
+    
+  
+    
+  
+    
+  
+    
+  
+    
+(function( jQuery ){
+  var $module = jQuery('#m-1670653791509').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+    
+    
+    
+(function(jQuery) {
+  var $module = jQuery('#m-1670653791561').children('.module');
+  var mode = jQuery('.gryffeditor').hasClass('editing') ? 'dev' : 'production';
+
+  var blankOption = $module.attr('data-blankoption');
+  var blankOptionText = $module.attr('data-blankoptiontext');
+  var style = $module.attr('data-style');
+
+  $module.gfV3ProductVariants({
+    mode: mode,
+    blankOption: blankOption,
+    blankOptionText: blankOptionText,
+    style: style,
+    onVariantSelected: function(variant, $select) {}
+  });
+})(window.GemQuery || jQuery); 
+    
+(function( jQuery ){
+  var $module = jQuery('#m-1670653791565').children('.module');
+  var style = $module.attr('data-style');
+  var updatePrice = $module.attr('data-updateprice');
+
+  $module.gfV3ProductQuantity({
+    'style': style,
+    'updatePrice': updatePrice
+  });
+})( window.GemQuery || jQuery );
+    
+(function( jQuery ){
+  var $module = jQuery('#m-1670653791547').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+    
+    
+(function(jQuery) {
+    var $module = jQuery('#m-1670653791508').children('.module');
+    $module.gfV3ProductPrice({
+        displayCurrency: true
+    });
+})(window.GemQuery || jQuery);
+    
+(function( jQuery ){
+  try {
+    var $module = jQuery('#m-1670653791574').children('.module');
+    var single = $module.attr('data-single');
+    var openDefault = $module.attr('data-openDefault');
+    var openTab = $module.attr('data-openTab');
+    var mode = jQuery('.gryffeditor').hasClass('editing') ? 'dev' : 'production';
+
+    if(openDefault == 0 || openDefault == '0') {
+      openTab = '0';
+    }
+
+    $module.gfAccordion({
+      single: single,
+      openTab: openTab,
+      mode: mode,
+      onChanged: function() {	
+        // Fix (P) Desc read more bug	
+        $module.find('.module-wrap[data-label="(P) Description"]').each(function(index, el) {	
+          if (jQuery(el).children('.module').data('gfv3productdesc') != undefined) {	
+            jQuery(el).children(".module").data("gfv3productdesc").initReadMore();	
+          }	
+        })	
+      }
+    });
+
+    var borderColor = $module.attr('data-borderColor');
+    var borderSize = $module.attr('data-borderSize');
+
+    $module.children('[data-accordion]').children('[data-control]').css('border-bottom', borderSize + ' solid ' + borderColor);
+    $module.children('[data-accordion]').children('[data-content]').children().css('border-bottom', borderSize + ' solid ' + borderColor);
+  } catch(err) {}
+})( window.GemQuery || jQuery );
+    
+    
+(function(jQuery) {
+    var $module = jQuery('#m-1670653791487').children('.module');
+    $module.gfV3ProductPrice({
+        displayCurrency: true
+    });
+})(window.GemQuery || jQuery);
+    
+    
+(function( jQuery ){
+  var $module = jQuery('#m-1670653791571').children('.module');
+  var style = $module.attr('data-style');
+  var updatePrice = $module.attr('data-updateprice');
+
+  $module.gfV3ProductQuantity({
+    'style': style,
+    'updatePrice': updatePrice
+  });
+})( window.GemQuery || jQuery );
+    
+(function( jQuery ){
+  var $module = jQuery('#m-1670653791616').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+    
+(function(jQuery) {
+  var $module = jQuery('#m-1670653791628').children('.module');
+  var mode = jQuery('.gryffeditor').hasClass('editing') ? 'dev' : 'production';
+
+  var blankOption = $module.attr('data-blankoption');
+  var blankOptionText = $module.attr('data-blankoptiontext');
+  var style = $module.attr('data-style');
+
+  $module.gfV3ProductVariants({
+    mode: mode,
+    blankOption: blankOption,
+    blankOptionText: blankOptionText,
+    style: style,
+    onVariantSelected: function(variant, $select) {}
+  });
+})(window.GemQuery || jQuery); 
+    
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                          (function( jQuery ){
+                              try{
+                                  if(jQuery().gfV2Lazyload){
+                                      var $module = jQuery(window);
+                                      $module.gfV2Lazyload({delay:125})
+                                  }
+                              }catch(err){
+                                  console.error(err)
+                              }
+                          })( window.GemQuery || jQuery );
+                      window.__gfFlowActions = []; window.__gfFlowActions.push([{"source":{"id":"#r-1670653791596"},"events":[{"key":"scrolling-to-percentage","data":{"condition":"lt","percentage":"30","runtime":"infinite"}}],"targets":[{"id":"#r-1670653791596","actions":[{"key":"hide","type":2,"data":{"delay":0,"duration":"50"}}]}]},{"source":{"id":"#r-1670653791596"},"events":[{"key":"scrolling-to-percentage","data":{"condition":"gte","percentage":"30","runtime":"infinite"}}],"targets":[{"id":"#r-1670653791596","actions":[{"key":"show","type":2,"data":{"delay":0,"duration":"50"}}]}]}]); window.__gfV1FlowActions.init();
